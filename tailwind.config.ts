@@ -11,8 +11,26 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "#1E40AF", 
+        secondary: "#9333EA", 
+        accent: "#FACC15", 
+      },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"], 
+        serif: ["Merriweather", "serif"],
+      },
+      spacing: {
+        128: "32rem",
+        144: "36rem",
+      },
+      borderRadius: {
+        xl: "1.5rem", 
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/forms"), 
+    require("@tailwindcss/typography"), 
+    require("@tailwindcss/aspect-ratio"), 
+  ],
 } satisfies Config;
